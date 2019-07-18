@@ -4,16 +4,16 @@
 //If the hotel is available, provide a button labeled "I'll reserve" otherwise provide a message with the text "Sorry, no free room for <number_of_nights> nights".
 //Try to style the program with the colors #003580, #FFFFFF and #E9F0FA.
 
-function HotelConstructor (name, availableNignts) {
+function HotelConstructor (name) {
 	this.name = name;
 	this.availableNights = Math.floor(Math.random() * 10) + 1;
 	this.checkAvailability = function () {
 		var nights = document.forms ["userNights"] ["nights"].value;
-		var available = this.availableNights - nights;
-		console.log(available);
+		return this.availableNights - nights;
 	}
 }
-	var hiltonHotel = new HotelConstructor('Hilton', " ");
+	var hiltonHotel = new HotelConstructor('Hilton');
 	console.log(hiltonHotel);
-
+	var holidayInn = new HotelConstructor("Holiday Inn" );
+	console.log(holidayInn);
 
