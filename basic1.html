@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic1</title>
+</head>
+<body>
+	<script>
+
+		function currentage(birthyear){
+			var currentdate = new Date();
+			console.log(currentdate);
+			var year = currentdate.getFullYear();
+			console.log(year);
+			var age = year - birthyear;
+			return age;
+		}	
+
+	
+		console.log(currentage(1998));
+
+
+
+	</script>
+
+</body>
+</html>
